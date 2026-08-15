@@ -141,14 +141,18 @@ int parentesisBalanceados(char *cadena)
    
    for (H = 0 ; cadena[H] != '\0' ; H++)
    {
-      if(cadena[H] == 40 || cadena[H] == 91 || cadena[H] == 125)
+      if(cadena[H] == 40 || cadena[H] == 91 || cadena[H] == 123)
       {
          char *temp = malloc(sizeof(char));
          *temp = cadena[H];
 
          push(Pila,temp);
       }
-      
+      else if(cadena[H] == 41 || cadena[H] == 93 || cadena[H] == 125)
+      {
+         char *temp = top(Pila);
+         if (temp == NULL) return 0;
+      }
    }
    
    return 0;
