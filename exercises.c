@@ -153,7 +153,7 @@ int parentesisBalanceados(char *cadena)
          if (temp == NULL) return 0;
 
          if((cadena[H] == 41 && *temp != 40) || (cadena[H] == 93 && *temp != 91) || (cadena[H] == 125 && *temp != 123)){
-            return 0;
+            return 1;
          }
       }
       pop(Pila);
