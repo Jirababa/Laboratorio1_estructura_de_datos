@@ -58,3 +58,16 @@ exercises.c:66:8: error: unused variable ‘Z’ [-Werror=unused-variable]
       |        ^
 cc1: all warnings being treated as errors
 34b147f
+Sat Aug 15 05:38:17 PM UTC 2026: 
+ exercises.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:23: error: invalid use of incomplete typedef ‘List’
+   68 |    for (Z = 0 ; Z <= L->size ; Z++)
+      |                       ^~
+exercises.c:69:28: error: invalid use of incomplete typedef ‘List’
+   69 |       sumatoria += *(int*)L->data[Z];
+      |                            ^~
+4e2302e

@@ -63,10 +63,12 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
    
-   int Z, suma = 0;
-   List *Aux = L;
+   int Z, sumatoria = 0;
+
+   for (Z = 0 ; Z <= L->size ; Z++)
+      sumatoria += *(int*)L->data[Z];
    
-   return suma;
+   return sumatoria;
 }
 
 /*
