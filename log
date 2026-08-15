@@ -44,3 +44,17 @@ exercises.c:70:24: error: invalid use of incomplete typedef ‘List’
    70 |        suma += *(int*)L->data[Z];
       |                        ^~
 d078d72
+Sat Aug 15 05:31:02 PM UTC 2026: 
+ exercises.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:67:10: error: unused variable ‘Aux’ [-Werror=unused-variable]
+   67 |    List *Aux = L;
+      |          ^~~
+exercises.c:66:8: error: unused variable ‘Z’ [-Werror=unused-variable]
+   66 |    int Z, suma = 0;
+      |        ^
+cc1: all warnings being treated as errors
+34b147f

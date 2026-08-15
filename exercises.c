@@ -64,11 +64,7 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) {
    
    int Z, suma = 0;
-   //List *Aux = L;
-    for (Z = 0 ; Z <= L->current ; Z++)
-    {
-       suma += *(int*)L->data[Z];
-    }
+   List *Aux = L;
    
    return suma;
 }
