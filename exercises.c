@@ -64,9 +64,13 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) {
    
    int Z, sumatoria = 0;
+   int *dato = first(L);
 
-   for (Z = 0 ; Z <= L->size ; Z++)
-      sumatoria += *(int*)L->data[Z];
+   for(Z = 0 ; Z < get_size(L) ; Z++)
+   {
+      sumatoria += *dato;
+      dato = next(L);
+   }
    
    return sumatoria;
 }

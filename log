@@ -82,3 +82,9 @@ exercises.c:69:28: error: invalid use of incomplete typedef ‘List’
    69 |       sumatoria += *(int*)L->data[Z];
       |                            ^~
 7eca170
+Sat Aug 15 06:16:46 PM UTC 2026: 
+ exercises.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+ tests:  2|3
+total_score: 20/70
+de87e56
