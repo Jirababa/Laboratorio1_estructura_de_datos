@@ -44,11 +44,11 @@ Al finalizar retorna la lista creada.
 List* crea_lista() {
    List* L = create_list();
 
-   int X;
+   int X; // limitador
 
    for (X = 0 ; X <= 10 ; X++)
    {
-      int *ptr_a_elemento = malloc(sizeof(int));
+      int *ptr_a_elemento = malloc(sizeof(int)); // Puntero que el cual almacenara la lista
       *ptr_a_elemento = X;
       pushBack(L , ptr_a_elemento);
    }
@@ -63,13 +63,13 @@ retorne la suma de sus elementos.
 */
 int sumaLista(List *L) {
    
-   int Z, sumatoria = 0;
-   int *dato = first(L);
+   int Z, sumatoria = 0; // Variables necesarias
+   int *dato = first(L); // Primer dato
 
    for(Z = 0 ; Z < get_size(L) ; Z++)
    {
       sumatoria += *dato;
-      dato = next(L);
+      dato = next(L); // Siguiente dato hasta que no haya mas
    }
    
    return sumatoria;
@@ -84,8 +84,18 @@ Asume que popCurrent luego de eliminar un elemento se
 posiciona en el elemento anterior.
 */
 
-void eliminaElementos(List*L, int elem){
+void eliminaElementos(List *L, int elem){
 
+   int *dato = first(L);
+
+   while (dato != NULL)
+   {
+      if (*dato == elem)
+      {
+         popCurrent(L);
+      }
+      dato = next(L);
+   }
 }
 
 /*
