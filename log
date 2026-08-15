@@ -112,3 +112,14 @@ Sat Aug 15 08:18:40 PM UTC 2026:
  tests:  4|1
 total_score: 50/70
 6432710
+Sat Aug 15 08:21:32 PM UTC 2026: 
+ exercises.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:161:12: error: ‘temp’ undeclared (first use in this function)
+  161 |       free(temp);
+      |            ^~~~
+exercises.c:161:12: note: each undeclared identifier is reported only once for each function it appears in
+85fc11e
