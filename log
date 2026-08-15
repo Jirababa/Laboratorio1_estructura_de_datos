@@ -123,3 +123,17 @@ exercises.c:161:12: error: ‘temp’ undeclared (first use in this function)
       |            ^~~~
 exercises.c:161:12: note: each undeclared identifier is reported only once for each function it appears in
 85fc11e
+Sat Aug 15 08:24:07 PM UTC 2026: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:161:7: error: ‘temp’ may be used uninitialized [-Werror=maybe-uninitialized]
+  161 |       free(temp);
+      |       ^~~~~~~~~~
+exercises.c:141:10: note: ‘temp’ was declared here
+  141 |    char *temp;
+      |          ^~~~
+cc1: all warnings being treated as errors
+10c34aa
