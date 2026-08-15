@@ -31,3 +31,16 @@ Sat Aug 15 05:06:55 PM UTC 2026:
  tests:  1|4
 total_score: 10/70
 b13eb24
+Sat Aug 15 05:30:19 PM UTC 2026: 
+ exercises.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:68:24: error: invalid use of incomplete typedef ‘List’
+   68 |     for (Z = 0 ; Z <= L->current ; Z++)
+      |                        ^~
+exercises.c:70:24: error: invalid use of incomplete typedef ‘List’
+   70 |        suma += *(int*)L->data[Z];
+      |                        ^~
+d078d72
