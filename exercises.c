@@ -144,21 +144,18 @@ int parentesisBalanceados(char *cadena)
    {
       if(cadena[H] == 40 || cadena[H] == 91 || cadena[H] == 123)
       {
-         char *temp = malloc(sizeof(char));
-         *temp = cadena[H];
-         
-         push(Pila,temp);
+         push(Pila, &cadena[H]);
       }
       else if(cadena[H] == 41 || cadena[H] == 93 || cadena[H] == 125)
       {
-         char *temp = top(Pila);
+         temp = top(Pila);
+         
          if (temp == NULL) return 0;
 
          if((cadena[H] == 41 && *temp != 40) || (cadena[H] == 93 && *temp != 91) || (cadena[H] == 125 && *temp != 123))
             return 0;
       }
       pop(Pila);
-      free(temp);
    }
    
    if (top(Pila) == NULL) return 1;
